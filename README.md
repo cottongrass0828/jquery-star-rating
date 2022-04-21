@@ -1,6 +1,6 @@
 jQuery Star Rating Plugin
 ======================================================================================
-Original Plugin¡G[jQuery Star Rating Plugin](http://irfandurmus.com/projects/jquery-star-rating-plugin/) 
+Original Plugin: [jQuery Star Rating Plugin](http://irfandurmus.com/projects/jquery-star-rating-plugin/) 
 
 I forked and updated this plugin to support setting some configuration according to needs
  1. set the number of stars by JavaScript
