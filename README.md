@@ -1,33 +1,47 @@
-[jQuery Star Rating Plugin](http://irfandurmus.com/projects/jquery-star-rating-plugin/) 
+jQuery Star Rating Plugin
 ======================================================================================
+Original Plugin¡G[jQuery Star Rating Plugin](http://irfandurmus.com/projects/jquery-star-rating-plugin/) 
 
-How to use 
+I forked and updated this plugin to support setting some configuration according to needs
+ 1. set the number of stars by JavaScript
+ 2. set the data-caseno and you can get it by callback function after clicking the stars
+ 3. set the number of starts that should light up by value (html attribute reference)
+ 4. bring callback function to be a configuration key
+
 --------------------------------------
-Detailed [documentation](http://irfandurmus.com/projects/jquery-star-rating-plugin/) and working [demo here](http://irfandurmus.com/projects/jquery-star-rating-plugin/).
 
+## How to use 
+### 1. Include css and js files
+    <link rel="stylesheet" type="text/css" src="rating.css" />
+    <script type="text/javascript" src="jquery.min.js"></script>
+    <script type="text/javascript" src="rating.js"></script>
+
+### 2. Prepare HTML part
+    <section class="starRate"></section>
+
+### 3. Initialize the plugin
+Write just a line code inside the document.ready function.
+
+    $('.starRate').rating();
+
+--------------------------------------
 ### Example HTML
-    <div class="container">
-        <input type="radio" name="example" class="rating" value="1" />
-        <input type="radio" name="example" class="rating" value="2" />
-        <input type="radio" name="example" class="rating" value="3" />
-        <input type="radio" name="example" class="rating" value="4" />
-        <input type="radio" name="example" class="rating" value="5" />
-    </div>
+    <!-- default 5 stars and none of one is light up-->
+    <section class="starRate"></section>
+
+    <!-- set the light up number by value / can carry a data that want to get by set data-caseno-->
+    <section class="starRate" value="3" data-caseno="A0001"></section>
 
 ### Simple usage
-    $('.container').rating();
+    $('.starRate').rating();
 
-### Using with callback method 
-    $('.container').rating(function(vote, event){
-        // console.log(vote, event);
-    });
+### Using with configuration 
+    $('.starRate').rating({
+            starNum: 8,
+            callback: function (caseno, vote, event) {
+                console.log('val:' + vote, ' caseno:' + caseno);
+            }
+        });
 
-### Example of using ajax
-    $('.container').rating(function(vote, event){
-        // write your ajax code here
-        // For example;
-        // $.get(document.URL, {vote: vote});
-    });
-
-
-
+## Acknowledgements
+This plugin was inspired by [jQuery Star Rating Plugin](http://irfandurmus.com/projects/jquery-star-rating-plugin/) .
