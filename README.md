@@ -2,14 +2,14 @@ jQuery Star Rating Plugin
 ======================================================================================
 Original Plugin: [jQuery Star Rating Plugin](http://irfandurmus.com/projects/jquery-star-rating-plugin/) 
 
+![image](https://github.com/cottongrass0828/jquery-star-rating/assets/72060740/4ffcaadb-0c52-4848-bacf-c143e791c403)
+
 I forked and updated this plugin to support setting some configuration according to needs
  1. set the number of stars by JavaScript
  2. set the data-caseno and you can get it by callback function after clicking the stars
  3. set the number of starts that should light up by value (html attribute reference)
  4. bring callback function to be a configuration key
-
 --------------------------------------
-
 ## How to use 
 ### 1. Include css and js files
     <link rel="stylesheet" type="text/css" src="rating.css" />
